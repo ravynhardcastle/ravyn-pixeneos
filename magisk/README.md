@@ -10,4 +10,4 @@ See Custota [usage](https://github.com/chenxiaolong/Custota#usage) for more info
 Only unofficial [pixincreate/Magisk](https://github.com/pixincreate/Magisk) is supported as [Official Magisk](https://github.com/topjohnwu/Magisk) is not supported by GrapheneOS.
 The chances of Root not working are high, let alone Zygisk.
 
-For detailed explanation, refer [README](https://github.com/ravynhardcastle/ravyn-pixenos#root)
+For detailed explanation, refer [README](https://github.com/ravynhardcastle/ravyn-pixeneos#root)
