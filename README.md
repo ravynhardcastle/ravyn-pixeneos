@@ -1,1 +1,1 @@
-Custom PixineOS build for personal use. Please refer to [PixineOS](https://github.com/pixincreate/PixeneOS).
+Custom PixeneOS build for personal use. Please refer to [PixeneOS](https://github.com/pixincreate/PixeneOS).
