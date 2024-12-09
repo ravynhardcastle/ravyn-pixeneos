@@ -36,7 +36,7 @@ jobs:
         with:
           configurationFile: .github/renovate.json5
           # https://docs.renovatebot.com/modules/platform/github/#running-using-a-fine-grained-token
-          token: ${{ teps.app-token.outputs.token }}
+          token: ${{ steps.app-token.outputs.token }}
         env:
             LOG_LEVEL: ${{ github.event.inputs.logLevel || 'info' }}
             RENOVATE_REPOSITORIES: ${{ github.repository }}
