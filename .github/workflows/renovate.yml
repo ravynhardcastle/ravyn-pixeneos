@@ -21,6 +21,13 @@ jobs:
   renovate:
     runs-on: ubuntu-latest
     steps:
+      - name: Create GitHub App Token
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.PRIVATE_KEY }}
+    
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -29,7 +36,7 @@ jobs:
         with:
           configurationFile: .github/renovate.json5
           # https://docs.renovatebot.com/modules/platform/github/#running-using-a-fine-grained-token
-          token: ${{ secrets.RENOVATE }}
+          token: ${{ teps.app-token.outputs.token }}
         env:
             LOG_LEVEL: ${{ github.event.inputs.logLevel || 'info' }}
             RENOVATE_REPOSITORIES: ${{ github.repository }}
