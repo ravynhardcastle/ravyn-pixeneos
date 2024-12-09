@@ -65,6 +65,14 @@ jobs:
           echo "DEVICE_NAME=${DEVICE_NAME}" >> $GITHUB_ENV
           echo "GRAPHENEOS_UPDATE_CHANNEL=${GRAPHENEOS[UPDATE_CHANNEL]}" >> $GITHUB_ENV
 
+      - name: free disk space
+        run: |
+          sudo swapoff -a
+          sudo rm -f /swapfile
+          sudo apt clean
+          docker rmi $(docker image ls -aq)
+          df -h
+
       - name: Check if a build exists already and verify assets
         shell: bash
         run: |
